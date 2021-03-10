@@ -13,9 +13,9 @@ services:
     environment:
       SERVICE_NAME: app
       SERVICE_TAGS: dev
-    working_dir: /var/www/application
+    working_dir: /var/www
     volumes:
-      - ./application:/var/www/application
+      - ./application:/var/www
     networks:
       - app-network
 
@@ -29,7 +29,7 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - ./application:/var/www/application
+      - ./application:/var/www/
       - ./nginx/conf.d/:/etc/nginx/conf.d/
     networks:
       - app-network
