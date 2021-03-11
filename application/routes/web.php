@@ -13,9 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 
-Route::get('categories/all', 'CategoryController@index')->name('category.all');
+Route::get('/', 'CategoryController@index')->name('category.all');
 Route::post('categories/upload', 'CategoryController@upload')->name('category.upload');
